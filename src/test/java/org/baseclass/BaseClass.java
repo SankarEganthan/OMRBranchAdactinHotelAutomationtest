@@ -30,7 +30,10 @@ public class BaseClass {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 	}
-
+	
+	public void close() {
+		driver.close();
+	}
 	public void enterUrl(String url) {
 		driver.get(url);
 	}
