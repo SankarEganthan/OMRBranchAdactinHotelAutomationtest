@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -31,6 +30,10 @@ public class BaseClass {
 		driver = new ChromeDriver();
 	}
 
+	
+	public void sleep() throws InterruptedException {
+		Thread.sleep(5000);
+	}
 	public void enterUrl(String url) {
 		driver.get(url);
 	}
