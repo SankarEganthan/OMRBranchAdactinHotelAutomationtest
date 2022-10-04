@@ -18,6 +18,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -29,17 +30,25 @@ public class BaseClass {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 	}
-<<<<<<< HEAD
-
+	
+	public void getIEDriver() {
+		WebDriverManager.iedriver().setup();
+		driver = new InternetExplorerDriver();
+	}
 	
 	public void sleep() throws InterruptedException {
 		Thread.sleep(5000);
-=======
-	
-	public void close() {
-		driver.close();
->>>>>>> fe2adeea5059bd0fc5d06c0eb2da1c09364e4564
 	}
+		
+		
+		public void close() {
+			driver.close();
+		}
+
+		/*<<<<<<< HEAD
+		=======
+>>>>>>> fe2adeea5059bd0fc5d06c0eb2da1c09364e4564*/
+	
 	public void enterUrl(String url) {
 		driver.get(url);
 	}
