@@ -29,17 +29,18 @@ public class BaseClass {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 	}
-<<<<<<< HEAD
-
 	
 	public void sleep() throws InterruptedException {
 		Thread.sleep(5000);
-=======
+	}
 	
 	public void close() {
 		driver.close();
->>>>>>> fe2adeea5059bd0fc5d06c0eb2da1c09364e4564
 	}
+/*<<<<<<< HEAD
+=======
+>>>>>>> fe2adeea5059bd0fc5d06c0eb2da1c09364e4564*/
+	
 	public void enterUrl(String url) {
 		driver.get(url);
 	}
